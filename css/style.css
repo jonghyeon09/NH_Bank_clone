@@ -1,0 +1,47 @@
+@import url(reset.css);
+
+header {
+  width: 100%;
+  z-index: 100;
+}
+header .headerTop {
+  height: 84px;
+  line-height: 84px;
+  border-bottom: 1px solid #eee;
+}
+.headerTop .inner {
+  position: relative;
+  margin: 0 auto;
+  width: 1100px;
+  background-color: antiquewhite;
+}
+.headerTop .logo {
+  float: left;
+  margin-right: 30px;
+  background-color: aqua;
+}
+.headerTop .logo a {
+  display: block;
+  width: 168px;
+  height: 84px;
+  background: url(/img/logo.png) 100% 50% no-repeat;
+}
+.headerTop .link,
+.headerTop .link li {
+  float: left;
+  margin-right: 14px;
+}
+.headerTop .topSearch {
+  position: relative;
+  left: 45px;
+  top: -5px;
+}
+.headerTop .topSearch input {
+  width: 382px;
+  height: 47px;
+  line-height: 42px;
+  padding: 0 45px 0 22px;
+  border: 2px solid #3e94e9;
+  border-radius: 30px;
+  background: #fff;
+}
