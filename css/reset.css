@@ -91,10 +91,10 @@ video {
   font: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
-  letter-spacing: -.06em;
+  letter-spacing: -0.06em;
   color: rgb(68, 68, 68);
 }
-a{
+a {
   text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
@@ -133,6 +133,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-li:hover{
+li:hover {
   cursor: pointer;
 }

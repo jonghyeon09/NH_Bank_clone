@@ -13,12 +13,10 @@ header .headerTop {
   position: relative;
   margin: 0 auto;
   width: 1100px;
-  background-color: antiquewhite;
 }
 .headerTop .logo {
   float: left;
   margin-right: 30px;
-  background-color: aqua;
 }
 .headerTop .logo a {
   display: block;
@@ -47,10 +45,10 @@ header .headerTop {
   border-radius: 30px;
   background: #fff;
 }
-.topSearch input:focus{
+.topSearch input:focus {
   outline: #3e94e9;
 }
-.headerTop .searchBt{
+.headerTop .searchBt {
   position: absolute;
   right: 20px;
   top: 30px;
@@ -58,16 +56,15 @@ header .headerTop {
   height: 30px;
   background: url(img/spr_header.png) no-repeat -104px 3px;
 }
-.headerTop .customer{
+.headerTop .customer {
   float: right;
   text-align: right;
   font-size: 14px;
-  background-color: rgb(117, 210, 175);
 }
-.customer .wrapLogin{
+.customer .wrapLogin {
   overflow: hidden;
 }
-.customer .bt{
+.customer .bt {
   padding: 6px 10px 7px;
   box-sizing: border-box;
   border: 1px solid #ddd;
@@ -77,8 +74,8 @@ header .headerTop {
   line-height: 20px;
 }
 .bt.join:before,
-.bt.login:before{
-  content: '';
+.bt.login:before {
+  content: "";
   display: inline-block;
   margin-right: 5px;
   width: 16px;
@@ -86,25 +83,23 @@ header .headerTop {
   vertical-align: middle;
   background: url(img/spr_header.png) no-repeat 0 -80px;
 }
-.bt.login:before{
+.bt.login:before {
   background-position-x: -26px;
 }
-.wrapGnb{
-
+.wrapGnb {
   height: 56px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 8%);
   border-bottom: 1px solid #e5e5e5;
 }
-.wrapGnb .gnb{
+.wrapGnb .gnb {
   width: 1100px;
   height: 100%;
   margin: 0 auto;
-}
-.gnb .gnbH{
   position: relative;
-  width: 22px;
+  background-color: aquamarine;
 }
-.gnbH .gnbAll{
+.gnb .gnbH {
+  width: 22px;
   background: url(img/spr_header.png) no-repeat;
   background-position: 3px 0;
   position: absolute;
@@ -113,4 +108,22 @@ header .headerTop {
   width: 30px;
   height: 25px;
   vertical-align: middle;
+}
+.gnb .gnbBts {
+  float: left;
+  width: 100%;
+  height: 100%;
+  margin-left: 90px;
+  background-color: beige;
+}
+.gnbBts li {
+  float: left;
+  margin-right: 59px;
+}
+.gnbBts li a {
+  display: inline-block;
+  height: 55px;
+  line-height: 55px;
+  font-size: 18px;
+  color: #000;
 }
