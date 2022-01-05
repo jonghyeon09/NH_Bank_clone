@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -90,8 +90,12 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  text-decoration: none;
+  box-sizing: border-box;
+  letter-spacing: -.06em;
   color: rgb(68, 68, 68);
+}
+a{
+  text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -129,6 +133,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-input:focus {
-  border: 2px solid #3e94e9;
+li:hover{
+  cursor: pointer;
 }
