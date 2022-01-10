@@ -151,12 +151,13 @@ header .wrapGnb {
   font-size: 18px;
   color: #000;
 }
-.gnb .gnbBt > a.over {
+// 가상 클래스
+a.over {
   font-weight: bold;
   color: #3e94e9;
   line-height: 55px;
 }
-.gnb .gnbBt > a.over::after {
+a.over::after {
   content: "";
   position: absolute;
   display: inline-block;
