@@ -93,6 +93,7 @@ video {
   box-sizing: border-box;
   letter-spacing: -0.06em;
   color: rgb(68, 68, 68);
+  font-family: 'Noto Sans KR', sans-serif;
 }
 a {
   text-decoration: none;

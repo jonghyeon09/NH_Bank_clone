@@ -3,23 +3,38 @@ $(document).ready(function() {
 });
 const gnbBt = document.querySelectorAll(".gnbBt > a");
 const wrapInner = document.querySelectorAll('.wrapInner');
-var i = 0;
 
-function styleAdd() {
+function styleAdd(i) {
   gnbBt[i].classList.add("over");
   wrapInner[i].style.display = "block";
 };
 
-function styleRemove() {
+function styleRemove(i) {
   gnbBt[i].classList.remove("over");
   wrapInner[i].style.display = "none";
 }
 
-  gnbBt[i].addEventListener("mouseenter", styleAdd);
-  gnbBt[i].addEventListener('mouseleave', styleRemove);
+// function mouseEvent(i) {
+//   gnbBt[i].addEventListener("mouseenter", styleAdd);
+//   gnbBt[i].addEventListener('mouseleave', styleRemove);
+//   wrapInner[i].addEventListener("mouseenter", styleAdd);
+//   wrapInner[i].addEventListener('mouseleave', styleRemove);
+// }
 
-  [].forEach.call(gnbBt, function(el) {
-    el.addEventListener('mouseenter', function() {
-      console.log(getElementIndex(gnbBt, el));
-    });
-  });
+mouseEvent();
+
+function mouseEvent() {
+  function mouseenter(idx) {
+    gnbBt[idx].addEventListener("mouseenter", styleAdd);
+    wrapInner[idx].addEventListener("mouseenter", styleAdd);
+  };
+  function mouseleave(idx) {
+    gnbBt[idx].addEventListener('mouseleave', styleRemove);
+    wrapInner[idx].addEventListener('mouseleave', styleRemove);
+  }
+  for (var i = 0; i < gnbBt.length; i++) {
+    mouseenter(i);
+    mouseleave(i);
+  }
+
+}
