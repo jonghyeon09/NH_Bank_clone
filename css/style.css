@@ -154,7 +154,7 @@ header .wrapGnb {
   font-size: 18px;
   color: #000;
 }
-// 가상 클래스
+/* 가상 클래스 */
 a.over {
   font-weight: bold;
   color: #3e94e9;
@@ -194,27 +194,27 @@ a.over::after {
   display: flex;
   flex-wrap: wrap;
 }
-.inner .gnbFoot{
+.inner .gnbFoot {
   margin: 0 auto;
-    width: 100%;
-    height: 84px;
-    text-align: center;
-    line-height: 84px;
+  width: 100%;
+  height: 84px;
+  text-align: center;
+  line-height: 84px;
 }
-.gnbFoot .gnbAll{
+.gnbFoot .gnbAll {
   display: inline-block;
   font-size: 16px;
   color: #000;
 }
-.gnbFoot .gnbAll::after{
-  content: '';
-    display: inline-block;
-    margin-left: 10px;
-    width: 24px;
-    height: 24px;
-    background: url(img/spr_header.png) no-repeat;
-    background-position: -68px 0;
-    vertical-align: text-top;
+.gnbFoot .gnbAll::after {
+  content: "";
+  display: inline-block;
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  background: url(img/spr_header.png) no-repeat;
+  background-position: -68px 0;
+  vertical-align: text-top;
 }
 .innerBts .innerBt {
   display: inline-block;

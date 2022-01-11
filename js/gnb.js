@@ -1,40 +1,26 @@
-$(document).ready(function() {
+// $(document).ready(function () {});
+const gnbBt = document.querySelectorAll(".gnbBt");
+const gnbBta = document.querySelectorAll(".gnbBt > a");
+const wrapInner = document.querySelectorAll(".wrapInner");
 
+function styleAdd(event) {
+  target = event.currentTarget;
+  parentEl = target.parentElement;
+  childEl = parentEl.children;
+  idx = Array.from(childEl).indexOf(target);
+  gnbBta[idx].classList.add("over");
+  wrapInner[idx].style.display = "block";
+}
+function styleRemove(event) {
+  target = event.currentTarget;
+  parentEl = target.parentElement;
+  childEl = parentEl.children;
+  idx = Array.from(childEl).indexOf(target);
+  gnbBta[idx].classList.remove("over");
+  wrapInner[idx].style.display = "none";
+}
+
+gnbBt.forEach((el) => {
+  el.addEventListener("mouseenter", styleAdd);
+  el.addEventListener("mouseleave", styleRemove);
 });
-const gnbBt = document.querySelectorAll(".gnbBt > a");
-const wrapInner = document.querySelectorAll('.wrapInner');
-
-function styleAdd(i) {
-  gnbBt[i].classList.add("over");
-  wrapInner[i].style.display = "block";
-};
-
-function styleRemove(i) {
-  gnbBt[i].classList.remove("over");
-  wrapInner[i].style.display = "none";
-}
-
-// function mouseEvent(i) {
-//   gnbBt[i].addEventListener("mouseenter", styleAdd);
-//   gnbBt[i].addEventListener('mouseleave', styleRemove);
-//   wrapInner[i].addEventListener("mouseenter", styleAdd);
-//   wrapInner[i].addEventListener('mouseleave', styleRemove);
-// }
-
-mouseEvent();
-
-function mouseEvent() {
-  function mouseenter(idx) {
-    gnbBt[idx].addEventListener("mouseenter", styleAdd);
-    wrapInner[idx].addEventListener("mouseenter", styleAdd);
-  };
-  function mouseleave(idx) {
-    gnbBt[idx].addEventListener('mouseleave', styleRemove);
-    wrapInner[idx].addEventListener('mouseleave', styleRemove);
-  }
-  for (var i = 0; i < gnbBt.length; i++) {
-    mouseenter(i);
-    mouseleave(i);
-  }
-
-}
