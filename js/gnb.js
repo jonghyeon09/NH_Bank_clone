@@ -4,10 +4,12 @@ const gnbBta = document.querySelectorAll(".gnbBt > a");
 const wrapInner = document.querySelectorAll(".wrapInner");
 
 function styleAdd(event) {
+  // index찾기
   target = event.currentTarget;
   parentEl = target.parentElement;
   childEl = parentEl.children;
   idx = Array.from(childEl).indexOf(target);
+  //--
   gnbBta[idx].classList.add("over");
   wrapInner[idx].style.display = "block";
 }

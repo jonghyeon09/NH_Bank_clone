@@ -253,3 +253,49 @@ a.over::after {
   word-break: keep-all;
   letter-spacing: 0;
 }
+section{
+  position: relative;
+  width: 1100px;
+  margin: 0 auto;
+  background-color: pink;
+}
+section .slider{
+  position: relative;
+  width: 1005px;
+  height: 585px;
+  margin: 5px auto 0;
+  background-color: rgb(28, 115, 159);
+}
+.slider .sliderWrap{
+  margin-bottom: 7px;
+}
+.slider .sliderView{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 493px;
+}
+.slider .sliderContent{
+  width: 400%;
+  position: relative;
+  /* transition-duration: 0s; */
+  /* transform: translate(-1005px, 0); */
+  display: flex;
+}
+.slider .content{
+  width: 1005px;
+  position: relative;
+}
+.slider .sliderControls{
+  position: relative;
+}
+.sliderControls .sliderBt{
+  width: 25px;
+  height: 62px;
+  margin-top: -220px;
+  background-color: rgb(158, 109, 107);
+}
+.sliderBt .btPre{
+  left: -50px;
+  background-image: url(img/prev.png);
+}
