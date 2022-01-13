@@ -285,17 +285,82 @@ section .slider{
 .slider .content{
   width: 1005px;
   position: relative;
+  background-color: rgb(187, 221, 34);
 }
 .slider .sliderControls{
   position: relative;
 }
-.sliderControls .sliderBt{
+.sliderBt a{
+  position: absolute;
+  top: 50%;
   width: 25px;
   height: 62px;
   margin-top: -220px;
   background-color: rgb(158, 109, 107);
 }
-.sliderBt .btPre{
+.sliderBt .Prev{
   left: -50px;
   background-image: url(img/prev.png);
+}
+.sliderBt .Next{
+  right: -50px;
+  background-image: url(img/next.png);
+}
+.sliderControls .sliderControls_auto{
+  position: absolute;
+  left: 255px;
+  top: -43px;
+  z-index: 1;
+  width: 35px;
+  text-align: center;
+  background-color: rgb(214, 214, 247);
+}
+.sliderControls_auto .autoBt{
+  display: inline-block;
+  vertical-align: bottom;
+}
+.sliderControls_auto .play{
+  width: 10px;
+  height: 14px;
+  background: url(img/ico_play.png) no-repeat;
+  display: block;
+  margin: 0 3px;
+}
+ .sliderControls .pager{
+  text-align: left;
+  position: absolute;
+  left: 50px;
+  top: -65px;
+  width: 50%;
+  font-size: .85em;
+  font-weight: bold;
+  color: #666;
+  padding-top: 20px;
+  background-color: skyblue;
+ }
+ .pager .pager_item{
+   display: inline-block;
+   vertical-align: bottom;
+ }
+ .pager a{
+   width: 50px;
+   height: 2px;
+   margin: 0;
+   background: #ddd;
+   display: block;
+ }
+.pager a:focus{
+  border: 2px solid #333;
+}
+.wrapCounter{
+  position: absolute;
+  top: 449px;
+  font-size: 18px;
+}
+.wrapCounter .counter{
+  font-weight: bold;
+  color: #000;
+}
+.wrapCounter .counter span{
+  color: #555;
 }
