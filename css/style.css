@@ -253,44 +253,44 @@ a.over::after {
   word-break: keep-all;
   letter-spacing: 0;
 }
-section{
+section {
   position: relative;
   width: 1100px;
   margin: 0 auto;
   background-color: pink;
 }
-section .slider{
+section .slider {
   position: relative;
   width: 1005px;
   height: 585px;
   margin: 5px auto 0;
   background-color: rgb(28, 115, 159);
 }
-.slider .sliderWrap{
+.slider .sliderWrap {
   margin-bottom: 7px;
 }
-.slider .sliderView{
+.slider .sliderView {
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
   height: 493px;
 }
-.slider .sliderContent{
+.slider .sliderContent {
   width: 400%;
   position: relative;
   /* transition-duration: 0s; */
   /* transform: translate(-1005px, 0); */
   display: flex;
 }
-.slider .content{
+.slider .content {
   width: 1005px;
   position: relative;
   background-color: rgb(187, 221, 34);
 }
-.slider .sliderControls{
+.slider .sliderControls {
   position: relative;
 }
-.sliderBt a{
+.sliderBt a {
   position: absolute;
   top: 50%;
   width: 25px;
@@ -298,69 +298,77 @@ section .slider{
   margin-top: -220px;
   background-color: rgb(158, 109, 107);
 }
-.sliderBt .Prev{
+.sliderBt .Prev {
   left: -50px;
   background-image: url(img/prev.png);
 }
-.sliderBt .Next{
+.sliderBt .Next {
   right: -50px;
   background-image: url(img/next.png);
 }
-.sliderControls .sliderControls_auto{
+.sliderControls .sliderControls_auto {
   position: absolute;
   left: 255px;
   top: -43px;
   z-index: 1;
   width: 35px;
   text-align: center;
-  background-color: rgb(214, 214, 247);
 }
-.sliderControls_auto .autoBt{
+.sliderControls_auto .autoBt {
   display: inline-block;
   vertical-align: bottom;
 }
-.sliderControls_auto .play{
+.sliderControls_auto .start {
   width: 10px;
   height: 14px;
   background: url(img/ico_play.png) no-repeat;
   display: block;
   margin: 0 3px;
 }
- .sliderControls .pager{
-  text-align: left;
+.sliderControls_auto .stop {
+  display: block;
+  width: 9px;
+  height: 11px;
+  margin: 0 3px;
+  background: url(img/ico_stop.png);
+}
+.sliderControls .pager {
   position: absolute;
   left: 50px;
   top: -65px;
   width: 50%;
-  font-size: .85em;
+  font-size: 0.85em;
   font-weight: bold;
   color: #666;
   padding-top: 20px;
   background-color: skyblue;
- }
- .pager .pager_item{
-   display: inline-block;
-   vertical-align: bottom;
- }
- .pager a{
-   width: 50px;
-   height: 2px;
-   margin: 0;
-   background: #ddd;
-   display: block;
- }
-.pager a:focus{
+}
+.sliderControls .pager .pager_item {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.sliderControls .pager a.active {
+  background: #000;
+}
+.sliderControls .pager a {
+  width: 50px;
+  height: 2px;
+  margin: 0;
+  background: #ddd;
+  display: block;
+}
+.sliderControls .pager a:focus {
   border: 2px solid #333;
 }
-.wrapCounter{
+.slider .wrapCounter {
   position: absolute;
   top: 449px;
   font-size: 18px;
 }
-.wrapCounter .counter{
+.wrapCounter .counter {
   font-weight: bold;
   color: #000;
 }
-.wrapCounter .counter span{
+.wrapCounter .counter span {
   color: #555;
 }
