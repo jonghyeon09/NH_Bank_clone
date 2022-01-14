@@ -143,7 +143,7 @@ header .wrapGnb {
 
 .gnb .gnbBt {
   float: left;
-  margin-right: 59px;
+  padding-right: 50px;
 }
 
 .gnb .gnbBt > a {
@@ -327,18 +327,17 @@ section .slider {
 }
 .sliderControls_auto .stop {
   display: block;
-  width: 9px;
-  height: 11px;
+  width: 10px;
+  height: 14px;
   margin: 0 3px;
   background: url(img/ico_stop.png);
 }
 .sliderControls .pager {
   position: absolute;
   left: 50px;
-  top: -65px;
+  top: -55px;
   width: 50%;
-  font-size: 0.85em;
-  font-weight: bold;
+  font-size: 0;
   color: #666;
   padding-top: 20px;
   background-color: skyblue;
@@ -347,7 +346,7 @@ section .slider {
   display: inline-block;
   vertical-align: bottom;
 }
-.sliderControls .pager a.active {
+.sliderControls .pager .active {
   background: #000;
 }
 .sliderControls .pager a {
