@@ -143,9 +143,11 @@ header .wrapGnb {
 
 .gnb .gnbBt {
   float: left;
-  padding-right: 50px;
+  padding: 0 25px;
 }
-
+.gnb .gnbBt:first-child {
+  padding-left: 0;
+}
 .gnb .gnbBt > a {
   position: relative;
   display: inline-block;
@@ -257,7 +259,6 @@ section {
   position: relative;
   width: 1100px;
   margin: 0 auto;
-  background-color: pink;
 }
 section .slider {
   position: relative;
@@ -370,4 +371,38 @@ section .slider {
 }
 .wrapCounter .counter span {
   color: #555;
+}
+
+section .box {
+  border-radius: 20px;
+  box-shadow: rgb(0 0 0 / 7%) 0px 0px 7px 4px;
+}
+.newJoinWrap {
+  height: 220px;
+  margin-bottom: 28px;
+}
+.newJoinWrap .newJoin {
+  height: 100%;
+  width: 100%;
+  float: left;
+  padding: 40px 40px;
+  background: #fff9b4 url(img/person_irp.png) no-repeat right 30px;
+}
+.newJoinWrap h3 {
+  font-size: 32px;
+  color: #000;
+  font-weight: bold;
+}
+.newJoinWrap p {
+  margin: 8px 0 20px;
+}
+.newJoinWrap .boxBt {
+  width: 275px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 18px;
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 6px;
 }

@@ -64,8 +64,7 @@ $(document).ready(function () {
         );
     }
   });
-  // slider_ani();
-  // function slider_ani() {}
+
   // 페이저 클릭
   $(pager_item).click(function () {
     item_i = $(this).index();
