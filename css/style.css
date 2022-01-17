@@ -39,7 +39,7 @@ header .headerTop {
   position: relative;
   left: 45px;
   display: inline-block;
-  /* vertical-align: middle; */
+  vertical-align: middle;
 }
 
 .headerTop .topSearch input[type="text"] {
@@ -76,7 +76,7 @@ header .headerTop {
 }
 
 .customer .wrapLogin {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .customer .bt {
