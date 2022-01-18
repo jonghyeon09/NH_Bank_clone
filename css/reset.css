@@ -92,11 +92,14 @@ video {
   vertical-align: baseline;
   box-sizing: border-box;
   letter-spacing: -0.06em;
-  color: rgb(68, 68, 68);
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
 }
 a {
   text-decoration: none;
+  color: rgb(68, 68, 68);
+}
+p {
+  line-height: 1.63em;
 }
 /* HTML5 display-role reset for older browsers */
 article,
