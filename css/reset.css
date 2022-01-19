@@ -98,9 +98,6 @@ a {
   text-decoration: none;
   color: rgb(68, 68, 68);
 }
-p {
-  line-height: 1.63em;
-}
 /* HTML5 display-role reset for older browsers */
 article,
 aside,

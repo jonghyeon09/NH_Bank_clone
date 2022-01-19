@@ -39,7 +39,6 @@ $(document).ready(function () {
           }
         );
     }
-    console.log(count);
   });
   // 이전버튼
   $(".Prev").click(function () {
@@ -67,23 +66,49 @@ $(document).ready(function () {
         );
     }
   });
-
-  function Prev() {
-    $(".sliderContent").stop().animate();
-  }
   // 페이저 클릭
   $(pager_item).click(function () {
     item_i = $(this).index();
     let page_count = item_i - count;
+    $(".autoBt a").removeClass("stop");
+    $(".autoBt a").addClass("start");
     clearInterval(interval);
+    pagerColor(item_i);
+    sliderCounter(item_i);
     if (page_count < 0) {
-      console.log("왼" + Math.abs(page_count));
+      // sliderCounter(page_count);
+      if (page_count == -1) {
+        $(".sliderContent")
+          .stop()
+          .animate({ left: -slide_w * 0 }, 300);
+      } else if (page_count == -2) {
+        $(".sliderContent")
+          .stop()
+          .animate({ left: -slide_w * 3 }, 300);
+      } else if (page_count == -3) {
+        $(".sliderContent")
+          .stop()
+          .animate({ left: -slide_w * 2 }, 300);
+      }
     } else {
-      console.log("우" + page_count);
+      if (page_count == 0) {
+        $(".sliderContent")
+          .stop()
+          .animate({ left: -slide_w * 1 }, 300);
+      } else if (page_count == 1) {
+        $(".sliderContent")
+          .stop()
+          .animate({ left: -slide_w * 2 }, 300);
+      } else if (page_count == 2) {
+        $(".sliderContent")
+          .stop()
+          .animate({ left: -slide_w * 3 }, 300);
+      } else if (page_count == 3) {
+        $(".sliderContent")
+          .stop()
+          .animate({ left: slide_w * 0 }, 300);
+      }
     }
-
-    //pagerColor(item_i);
-    // slider_ani(item_i);
   });
 
   // 자동재생
@@ -99,7 +124,6 @@ $(document).ready(function () {
       $(".autoBt a").removeClass("start");
       $(".autoBt a").addClass("stop");
     }
-    console.log(e);
   });
 
   sliderInInterval();
@@ -119,28 +143,4 @@ $(document).ready(function () {
   }
 
   $(pager_item[0]).children("a").addClass("active");
-
-  // function slider_ani(i) {
-  //   if (i == 0) {
-  //     $(".sliderContent")
-  //       .stop()
-  //       .animate({ left: -slide_w * i }, 300);
-  //     pagerColor(i);
-  //   } else if (i == 1) {
-  //     $(".sliderContent")
-  //       .stop()
-  //       .animate({ left: -slide_w * i }, 300);
-  //     pagerColor(i);
-  //   } else if (i == 2) {
-  //     $(".sliderContent")
-  //       .stop()
-  //       .animate({ left: -slide_w * i }, 300);
-  //     pagerColor(i);
-  //   } else if (i == 3) {
-  //     $(".sliderContent")
-  //       .stop()
-  //       .animate({ left: -slide_w * i }, 300);
-  //     pagerColor(i);
-  //   }
-  // }
 });

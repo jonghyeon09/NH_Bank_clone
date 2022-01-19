@@ -271,7 +271,7 @@ section .slider {
 }
 .slider .sliderView {
   width: 100%;
-  /* overflow: hidden; */
+  overflow: hidden;
   position: relative;
   height: 493px;
 }
@@ -385,6 +385,7 @@ section .newJoinWrap {
 }
 .newJoinWrap p {
   margin: 8px 0 20px;
+  line-height: 1.63em;
 }
 .newJoinWrap .boxBt {
   width: 275px;
@@ -421,6 +422,7 @@ section .info {
 .info .l_info p,
 .r_info p {
   margin: 10px 0 38px;
+  line-height: 1.63em;
 }
 .info .info_bt {
   width: 100%;
@@ -440,14 +442,13 @@ section .info {
 }
 section .pensionLife {
   margin-bottom: 30px;
-  color: #000;
+  color: #000 !important;
   text-align: center;
 }
 .pensionLife .box {
-  /* position: relative; */
+  position: relative;
   height: 686px;
   padding-top: 40px;
-  background-color: #3e94e9;
 }
 .pensionLife .box h3 {
   font-size: 32px;
@@ -458,12 +459,12 @@ section .pensionLife {
   width: 1020px;
   display: flex;
   justify-content: space-between;
-  background-color: orange;
+  background-color: white;
 }
-.pensionLife .life > li {
-  /* position: relative; */
+.pensionLife ul.life > li {
+  position: relative;
 }
-.pensionLife .life > li > a {
+.pensionLife ul.life > li > a {
   display: inline-block;
   width: 240px;
   height: 360px;
@@ -472,14 +473,194 @@ section .pensionLife {
   border: 1px solid #eee;
   font-size: 24px;
   text-align: center;
-  z-index: 1;
+  color: #000;
 }
-.pensionLife .life .btm {
+.pensionLife li > a > p {
+  line-height: 32px;
+}
+.pensionLife li > a > span {
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 15px;
+}
+.pensionLife li.life1 > a {
+  background: url(img/pension_life_01.png) no-repeat center 45px;
+}
+.pensionLife li.life2 > a {
+  background: url(img/pension_life_02.png) no-repeat center 45px;
+}
+.pensionLife li.life3 > a {
+  background: url(img/pension_life_03.png) no-repeat center 45px;
+}
+.pensionLife li.life4 > a {
+  background: url(img/pension_life_04.png) no-repeat center 45px;
+}
+.pensionLife ul.life > li.on {
+  background-color: #3e94e9;
+}
+.pensionLife ul.life > li > a:hover::after,
+.pensionLife ul.life > li > a.on::after,
+.pensionLife ul.life > li.on > a::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  left: 45%;
+  bottom: -14px;
+  width: 24px;
+  height: 16px;
+  background: url(img/arrow_01.png);
+}
+.pensionLife .life > li > a:focus,
+.pensionLife .life > li > a:hover {
+  margin-top: 20px;
+  box-shadow: 0px 0px 7px 4px rgb(0 0 0 / 9%);
+  transition: 0.3s;
+  color: #fff;
+  background-color: #3e94e9;
+}
+.pensionLife .life > li.on > a:hover {
+  margin-top: 20px;
+  transition: 0.3s;
+  color: #fff;
+}
+.pensionLife .life .lifeContent {
   position: absolute;
   left: 0;
   bottom: 0;
   height: 77px;
   width: 1100px;
   padding: 100px 0;
-  background-color: antiquewhite;
+  background: url(img/bg_lifecon.png) repeat-x 0 bottom;
+  border-radius: 20px;
+}
+.pensionLife .life .lifeContent > ul {
+  display: flex;
+  justify-content: space-around;
+  display: none;
+}
+.pensionLife .life .lifeContent > ul > li {
+  margin-top: -35px;
+  width: 360px;
+  height: 100px;
+  display: inline-block;
+  border-right: 1px solid #eee;
+  font-size: 15px;
+  color: #919191;
+  line-height: 22px;
+}
+.pensionLife .life .lifeContent > ul > li > span.dot {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #3e94e9;
+  line-height: 22px;
+}
+.pensionLife .life .lifeContent > ul > li > span::before {
+  display: inline-block;
+  content: "";
+  position: relative;
+  left: -7px;
+  top: -3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #3e94e9;
+}
+section .customer {
+  width: 1100px;
+  height: 300px;
+  margin: 6px 0 13px;
+  display: flex;
+  background-color: pink;
+}
+.customer .l_customer {
+  width: 320px;
+  height: 285px;
+  padding: 30px;
+  margin-right: 30px;
+  background-color: #17b464;
+}
+.customer .r_customer {
+  width: 750px;
+  height: 285px;
+  background-color: aqua;
+}
+section .faq {
+  margin-bottom: 30px;
+}
+.faq .box {
+  position: relative;
+  height: 145px;
+  padding: 40px 40px 48px;
+}
+.faq .box .faqBt {
+  color: #666;
+  font-size: 18px;
+  font-weight: bold;
+}
+.faq .box .faqBt::after {
+  display: inline-block;
+  content: "";
+  width: 8px;
+  height: 12px;
+  margin-left: 9px;
+  background: url(img/spr_icons.png) no-repeat -166px -29px;
+}
+.faq .box h3 {
+  margin-top: 15px;
+  font-size: 24px;
+}
+.faq .hash {
+  position: absolute;
+  top: 50%;
+  right: 45px;
+  transform: translateY(-50%);
+  background-color: khaki;
+}
+.faq .hash a {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 25px;
+  padding: 0 28px;
+  margin-right: 8px;
+  font-size: 16px;
+  background: #3e94e9;
+  color: #fff;
+}
+section .notice {
+  height: 75px;
+  padding: 0 30px;
+  border-radius: 20px;
+  background: #f8f8f8;
+}
+.notice .noticeSlider {
+  position: relative;
+  top: 24px;
+}
+section .banner {
+  margin-top: 24px;
+  background-color: orange;
+}
+.banner ul {
+  height: 170px;
+  display: flex;
+}
+.banner ul li {
+  width: 366px;
+  height: 140px;
+  background-color: skyblue;
+}
+footer {
+  border-top: 1px solid #ccc;
+}
+footer .inner {
+  position: relative;
+  margin: 0 auto;
+  width: 1100px;
+  padding: 44px 0 60px;
+  color: #888;
+  background-color: tomato;
 }
