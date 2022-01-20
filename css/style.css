@@ -497,12 +497,11 @@ section .pensionLife {
 .pensionLife li.life4 > a {
   background: url(img/pension_life_04.png) no-repeat center 45px;
 }
-.pensionLife ul.life > li.on {
+.pensionLife ul.life > li > a.on {
   background-color: #3e94e9;
 }
-.pensionLife ul.life > li > a:hover::after,
-.pensionLife ul.life > li > a.on::after,
-.pensionLife ul.life > li.on > a::after {
+.pensionLife .life > li > a:hover::after,
+.pensionLife .life > li > a.on::after {
   display: inline-block;
   content: "";
   position: absolute;
@@ -512,18 +511,15 @@ section .pensionLife {
   height: 16px;
   background: url(img/arrow_01.png);
 }
-.pensionLife .life > li > a:focus,
+.pensionLife .life > li > a:focus {
+  outline: none;
+}
 .pensionLife .life > li > a:hover {
   margin-top: 20px;
   box-shadow: 0px 0px 7px 4px rgb(0 0 0 / 9%);
   transition: 0.3s;
   color: #fff;
   background-color: #3e94e9;
-}
-.pensionLife .life > li.on > a:hover {
-  margin-top: 20px;
-  transition: 0.3s;
-  color: #fff;
 }
 .pensionLife .life .lifeContent {
   position: absolute;
@@ -538,7 +534,6 @@ section .pensionLife {
 .pensionLife .life .lifeContent > ul {
   display: flex;
   justify-content: space-around;
-  display: none;
 }
 .pensionLife .life .lifeContent > ul > li {
   margin-top: -35px;
@@ -549,6 +544,10 @@ section .pensionLife {
   font-size: 15px;
   color: #919191;
   line-height: 22px;
+  z-index: 1;
+}
+.pensionLife .life .lifeContent > ul > li:last-child {
+  border-right: none;
 }
 .pensionLife .life .lifeContent > ul > li > span.dot {
   display: block;
@@ -574,19 +573,143 @@ section .customer {
   height: 300px;
   margin: 6px 0 13px;
   display: flex;
-  background-color: pink;
+  justify-content: space-between;
 }
-.customer .l_customer {
+.customer .l_cs {
   width: 320px;
   height: 285px;
   padding: 30px;
   margin-right: 30px;
-  background-color: #17b464;
 }
-.customer .r_customer {
+.customer .l_cs .eduWrap .edu {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+.customer .l_cs .eduWrap .edu::after {
+  display: inline-block;
+  content: "";
+  width: 8px;
+  height: 12px;
+  margin-left: 9px;
+  background: url(img/spr_icons.png) no-repeat -166px -29px;
+}
+.customer .l_cs .eduWrap .start {
+  width: 10px;
+  height: 14px;
+  background: url(img/ico_play.png) no-repeat;
+  display: block;
+  margin: 0 3px;
+}
+.customer .l_cs .eduWrap .stop {
+  display: block;
+  float: right;
+  width: 10px;
+  height: 14px;
+  margin: 3px 3px 0;
+  background: url(img/ico_stop.png);
+}
+.customer .l_cs .eduWrap .eduSliderWrap {
+  width: 260px;
+  margin-top: 15px;
+}
+.eduSliderWrap .eduSlider {
+  width: 100%;
+  position: relative;
+  height: 201px;
+  overflow: hidden;
+}
+.eduSliderWrap .eduSlider > ul {
+  display: flex;
+}
+.eduSliderWrap .eduSlider > ul > li {
+}
+.eduSliderWrap .eduSlider > ul > li > p {
+  padding-right: 5px;
+  margin-top: 16px;
+  font-size: 16px;
+  width: 190px;
+  line-height: 30px;
+  color: #444;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.eduSliderWrap .eduSlider .controls {
+  position: absolute;
+  right: 38px;
+  top: 190px;
+}
+.eduSliderWrap .eduSlider .controls .prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-5%);
+  left: -30px;
+  margin-top: -18px;
+  width: 32px;
+  height: 30px;
+  background: #fff url(img/notice_control.png) no-repeat;
+}
+.eduSliderWrap .eduSlider .controls .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-5%);
+  right: -37px;
+  margin-top: -18px;
+  width: 32px;
+  height: 30px;
+  background: #fff url(img/notice_control.png) no-repeat;
+  background-position: 0 -30px;
+}
+.customer .r_cs {
   width: 750px;
   height: 285px;
-  background-color: aqua;
+}
+.customer .r_cs .csWrap {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+.customer .r_cs .csWrap .top {
+  position: relative;
+}
+.customer .r_cs .csWrap .top h4,
+.customer .r_cs .csWrap .bottom h4 {
+  margin-bottom: 13px;
+  font-size: 22px;
+  color: #000;
+  font-weight: bold;
+}
+.customer .r_cs .csWrap .top p,
+.customer .r_cs .csWrap .bottom p {
+  font-size: 16px;
+  color: #888;
+  line-height: 25px;
+}
+.customer .r_cs .csWrap .top .goBt {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  display: inline-block;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  line-height: 48px;
+  border: 1px solid #000;
+  border-radius: 6px;
+}
+.customer .r_cs .csWrap .top a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+.customer .r_cs .csWrap .top a::after {
+  display: inline-block;
+  content: "";
+  width: 8px;
+  height: 12px;
+  margin-left: 9px;
+  background: url(img/spr_header.png) no-repeat -166px -29px;
 }
 section .faq {
   margin-bottom: 30px;
