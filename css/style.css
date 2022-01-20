@@ -665,28 +665,24 @@ section .customer {
   width: 750px;
   height: 285px;
 }
-.customer .r_cs .csWrap {
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
-}
-.customer .r_cs .csWrap .top {
+.customer .r_cs .top,
+.customer .r_cs .bottom {
   position: relative;
 }
-.customer .r_cs .csWrap .top h4,
-.customer .r_cs .csWrap .bottom h4 {
+.customer .r_cs .top h4,
+.customer .r_cs .bottom h4 {
   margin-bottom: 13px;
   font-size: 22px;
   color: #000;
   font-weight: bold;
 }
-.customer .r_cs .csWrap .top p,
-.customer .r_cs .csWrap .bottom p {
+.customer .r_cs .top p,
+.customer .r_cs .bottom p {
   font-size: 16px;
   color: #888;
   line-height: 25px;
 }
-.customer .r_cs .csWrap .top .goBt {
+.customer .r_cs .top .goBt {
   position: absolute;
   top: 4px;
   right: 0;
@@ -698,18 +694,29 @@ section .customer {
   border: 1px solid #000;
   border-radius: 6px;
 }
-.customer .r_cs .csWrap .top a {
+.customer .r_cs .top a {
   font-size: 18px;
   font-weight: bold;
   color: #000;
 }
-.customer .r_cs .csWrap .top a::after {
+.customer .r_cs .top a::after {
   display: inline-block;
   content: "";
   width: 8px;
   height: 12px;
   margin-left: 9px;
   background: url(img/spr_header.png) no-repeat -166px -29px;
+}
+.customer .r_cs .bottom {
+  margin-top: 40px;
+}
+.customer .r_cs .bottom h1 {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 30px;
+  font-weight: bold;
 }
 section .faq {
   margin-bottom: 30px;
@@ -741,7 +748,6 @@ section .faq {
   top: 50%;
   right: 45px;
   transform: translateY(-50%);
-  background-color: khaki;
 }
 .faq .hash a {
   display: inline-block;
