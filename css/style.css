@@ -767,21 +767,112 @@ section .notice {
   background: #f8f8f8;
 }
 .notice .noticeSlider {
+  max-width: 1100px;
+  height: 30px;
   position: relative;
   top: 24px;
 }
+.notice .noticeSlider > ul {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.notice .noticeSlider > ul > li {
+  width: 1040px;
+}
+.notice .noticeSlider > ul > li > a {
+  font-size: 16px;
+  line-height: 30px;
+}
+.notice .noticeSlider .controls {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.notice .noticeSlider .controls .conWrap {
+  display: flex;
+  align-items: center;
+}
+.notice .noticeSlider .controls .stop {
+  width: 10px;
+  height: 14px;
+  background: url(img/ico_stop.png);
+  margin-right: 20px;
+}
+.notice .noticeSlider .controls .start {
+  width: 10px;
+  height: 14px;
+  background: url(img/ico_stop.png);
+}
+.notice .noticeSlider .controls .prev {
+  width: 32px;
+  height: 30px;
+  background: #fff url(img/notice_control.png) no-repeat;
+}
+.notice .noticeSlider .controls .next {
+  width: 32px;
+  height: 30px;
+  background: #fff url(img/notice_control.png) no-repeat;
+  background-position: 0 -30px;
+  margin-left: 5px;
+}
 section .banner {
   margin-top: 24px;
-  background-color: orange;
 }
 .banner ul {
   height: 170px;
   display: flex;
 }
 .banner ul li {
+  position: relative;
   width: 366px;
   height: 140px;
-  background-color: skyblue;
+  background: url(img/ico_banner.png) no-repeat;
+}
+.banner ul li::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 65px;
+  width: 1px;
+  height: 30px;
+  background: #ccc;
+}
+.banner ul li:last-child::after {
+  background: none;
+}
+.banner ul li.banner1 {
+  background-position: 75px 50px;
+}
+.banner ul li.banner2 {
+  background-position: 75px -85px;
+}
+.banner ul li.banner3 {
+  background-position: 75px -230px;
+  padding-right: -50px;
+}
+.banner ul li.banner3 {
+  padding-right: 50px;
+}
+.banner ul li a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -30%);
+  font-size: 16px;
+  line-height: 26px;
+  color: #777;
+}
+.banner ul li a h3 {
+  font-size: 20px;
+  color: #444;
+  font-weight: bold;
+}
+.banner .b3 {
+  position: relative;
+  transform: translateX(-15%);
 }
 footer {
   border-top: 1px solid #ccc;
@@ -792,5 +883,108 @@ footer .inner {
   width: 1100px;
   padding: 44px 0 60px;
   color: #888;
-  background-color: tomato;
+  /* font-weight: bold; */
+}
+.inner > ul {
+  display: flex;
+}
+.inner > ul > li {
+  position: relative;
+  padding-right: 40px;
+}
+.inner .footLink > li:nth-child(2),
+.inner .footLink > li:nth-child(3) {
+  color: #000;
+}
+.inner .footLink li::after,
+.inner .footCS li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  width: 1px;
+  height: 16px;
+  margin-top: -7px;
+  background-color: #ccc;
+}
+.inner .footLink li:last-child::after,
+.inner .footCS li:last-child::after {
+  background: none;
+}
+.inner .footCS {
+  margin-top: 38px;
+  font-size: 14px;
+}
+.inner .footCS li {
+  padding-right: 16px;
+}
+.inner .footCS li::after {
+  right: 8px;
+  height: 12px;
+  margin-top: -5px;
+}
+.inner .footCS li:first-child {
+  color: #3e94e9;
+}
+.inner .footCopy {
+  margin-top: 15px;
+  font-size: 14px;
+}
+.inner .footFamilly {
+  /* position: absolute;
+  top: 0;
+  right: 0; */
+}
+.inner .footFamilly a {
+  display: block;
+  height: 42px;
+  padding-left: 18px;
+  line-height: 42px;
+  color: #444;
+  border: 1px solid #ccc;
+  background: url(img/ico_arrow_up.png) 90% center no-repeat;
+}
+.inner .footFamilly a.active {
+  background: url(img/ico_arrow_down.png) 90% center no-repeat;
+}
+.inner .footFamilly .l_site {
+  position: absolute;
+  top: 30px;
+  right: 190px;
+  width: 140px;
+}
+.inner .footFamilly .l_site ul,
+.inner .footFamilly .r_site ul {
+  position: absolute;
+  bottom: 100%;
+  width: 140px;
+  background: white;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  z-index: 1;
+  display: none;
+}
+.inner .footFamilly .l_site li,
+.inner .footFamilly .r_site li {
+  padding-left: 10px;
+  line-height: 26px;
+  font-size: 14px;
+}
+.inner .footFamilly .r_site {
+  position: absolute;
+  top: 30px;
+  right: 0px;
+  width: 180px;
+}
+.inner .footFamilly .r_site li {
+  width: 180px;
+}
+.inner .footerImg {
+  position: absolute;
+  top: 90px;
+  right: 0;
+}
+.inner .footerImg li {
+  margin-left: 16px;
+  padding: 0;
 }
