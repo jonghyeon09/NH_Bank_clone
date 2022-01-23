@@ -8,9 +8,3 @@
 *::-webkit-scrollbar-thumb {
   background-color: #aaa;
 }
-* {
-  scrollbar-base-color: #fff;
-  scrollbar-arrow-color: #aaa;
-  scrollbar-face-color: #aaa;
-  scrollbar-track-color: #ddd;
-}
