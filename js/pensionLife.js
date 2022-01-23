@@ -18,13 +18,14 @@ $(document).ready(function () {
       $(".life4>a").trigger("click");
       count = 0;
     }
-    console.log(count);
   }, 3000);
 
-  $(life_li).focus().click(function (e) { 
-    e.preventDefault();
-  });
-  
+  $(life_li)
+    .focus()
+    .click(function (e) {
+      e.preventDefault();
+    });
+
   $(life_li).click(function () {
     idx = $(this).index();
     showContent(idx);
@@ -33,7 +34,7 @@ $(document).ready(function () {
     $(life_li_a).removeClass("on");
     $(life_li_a[idx]).addClass("on");
   });
-  
+
   $(life_li).mouseenter(function () {
     idx = $(this).index();
     showContent(idx);
@@ -42,7 +43,7 @@ $(document).ready(function () {
     $(life_li_a).removeClass("on");
   });
 
-  $(life_li).mouseleave(function () { 
+  $(life_li).mouseleave(function () {
     removeStyle();
     interval = setInterval(() => {
       if (count == 0) {
@@ -58,10 +59,9 @@ $(document).ready(function () {
         $(".life4>a").trigger("click");
         count = 0;
       }
-      console.log(count);
     }, 3000);
   });
-  
+
   $(lifeContent).hide();
 
   start();
@@ -80,8 +80,8 @@ $(document).ready(function () {
     $(life_li_a[idx]).css({
       "margin-top": "20px",
       "box-shadow": "0px 0px 7px 4px rgb(0 0 0 / 9%)",
-      "transition": "0.3s",
-      "color": "white",
+      transition: "0.3s",
+      color: "white",
       "background-color": "#3e94e9",
     });
   }
@@ -90,8 +90,8 @@ $(document).ready(function () {
     $(life_li_a).css({
       "margin-top": "-20px",
       "box-shadow": "none",
-      "transition": "none",
-      "color": "black",
+      transition: "none",
+      color: "black",
       "background-color": "white",
     });
   }
