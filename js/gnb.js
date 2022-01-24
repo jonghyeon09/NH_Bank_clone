@@ -1,4 +1,3 @@
-// $(document).ready(function () {});
 const gnbBt = document.querySelectorAll(".gnbBt");
 const gnbBta = document.querySelectorAll(".gnbBt > a");
 const wrapInner = document.querySelectorAll(".wrapInner");
